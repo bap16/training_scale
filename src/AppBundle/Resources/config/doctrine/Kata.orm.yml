@@ -1,0 +1,38 @@
+AppBundle\Entity\Kata:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Entity\KataRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        suly:
+            type: integer
+        bicepszBal:
+            type: integer
+        bicepszJobb:
+            type: integer
+        dagadtHattyuBal:
+            type: integer
+        dagadtHattyuJobb:
+            type: integer
+        mell:
+            type: integer
+        derek:
+            type: integer
+        csipo:
+            type: integer
+        combBal:
+            type: integer
+        combJobb:
+            type: integer
+        vadliBal:
+            type: integer
+        vadliJobb:
+            type: integer
+        datum:
+            type: date
+    lifecycleCallbacks: {  }

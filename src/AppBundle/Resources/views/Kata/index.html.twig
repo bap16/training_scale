@@ -1,0 +1,65 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Kata list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Suly</th>
+                <th>Bicepszbal</th>
+                <th>Bicepszjobb</th>
+                <th>Dagadthattyubal</th>
+                <th>Dagadthattyujobb</th>
+                <th>Mell</th>
+                <th>Derek</th>
+                <th>Csipo</th>
+                <th>Combbal</th>
+                <th>Combjobb</th>
+                <th>Vadlibal</th>
+                <th>Vadlijobb</th>
+                <th>Datum</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('kata_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.suly }}</td>
+                <td>{{ entity.bicepszBal }}</td>
+                <td>{{ entity.bicepszJobb }}</td>
+                <td>{{ entity.dagadtHattyuBal }}</td>
+                <td>{{ entity.dagadtHattyuJobb }}</td>
+                <td>{{ entity.mell }}</td>
+                <td>{{ entity.derek }}</td>
+                <td>{{ entity.csipo }}</td>
+                <td>{{ entity.combBal }}</td>
+                <td>{{ entity.combJobb }}</td>
+                <td>{{ entity.vadliBal }}</td>
+                <td>{{ entity.vadliJobb }}</td>
+                <td>{% if entity.datum %}{{ entity.datum|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('kata_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('kata_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('kata_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

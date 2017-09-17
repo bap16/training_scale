@@ -1,0 +1,80 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Kata</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Suly</th>
+                <td>{{ entity.suly }}</td>
+            </tr>
+            <tr>
+                <th>Bicepszbal</th>
+                <td>{{ entity.bicepszBal }}</td>
+            </tr>
+            <tr>
+                <th>Bicepszjobb</th>
+                <td>{{ entity.bicepszJobb }}</td>
+            </tr>
+            <tr>
+                <th>Dagadthattyubal</th>
+                <td>{{ entity.dagadtHattyuBal }}</td>
+            </tr>
+            <tr>
+                <th>Dagadthattyujobb</th>
+                <td>{{ entity.dagadtHattyuJobb }}</td>
+            </tr>
+            <tr>
+                <th>Mell</th>
+                <td>{{ entity.mell }}</td>
+            </tr>
+            <tr>
+                <th>Derek</th>
+                <td>{{ entity.derek }}</td>
+            </tr>
+            <tr>
+                <th>Csipo</th>
+                <td>{{ entity.csipo }}</td>
+            </tr>
+            <tr>
+                <th>Combbal</th>
+                <td>{{ entity.combBal }}</td>
+            </tr>
+            <tr>
+                <th>Combjobb</th>
+                <td>{{ entity.combJobb }}</td>
+            </tr>
+            <tr>
+                <th>Vadlibal</th>
+                <td>{{ entity.vadliBal }}</td>
+            </tr>
+            <tr>
+                <th>Vadlijobb</th>
+                <td>{{ entity.vadliJobb }}</td>
+            </tr>
+            <tr>
+                <th>Datum</th>
+                <td>{{ entity.datum|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('kata') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('kata_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

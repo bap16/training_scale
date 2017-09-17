@@ -1,0 +1,15 @@
+#app:
+#    resource: '@AppBundle/Controller/'
+#    type: annotation
+
+kata:
+    resource: '@AppBundle/Resources/config/routing/kata.yml'
+    prefix:   /kata
+
+attila:
+    resource: "@AppBundle/Resources/config/routing/attila.yml"
+    prefix:   /attila
+
+menu:
+    resource: "@AppBundle/Resources/config/routing/menu.yml"
+    prefix: /

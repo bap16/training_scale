@@ -1,0 +1,8 @@
+app_attila:
+    resource: "@AppBundle/Resources/config/routing/attila.yml"
+    prefix:   /attila
+
+app_kata:
+    resource: "@AppBundle/Resources/config/routing/kata.yml"
+    prefix:   /kata
+

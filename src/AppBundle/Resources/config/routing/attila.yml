@@ -1,0 +1,30 @@
+attila:
+    path:     /
+    defaults: { _controller: "AppBundle:Attila:index" }
+
+attila_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Attila:show" }
+
+attila_new:
+    path:     /new
+    defaults: { _controller: "AppBundle:Attila:new" }
+
+attila_create:
+    path:     /create
+    defaults: { _controller: "AppBundle:Attila:create" }
+    methods:  POST
+
+attila_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AppBundle:Attila:edit" }
+
+attila_update:
+    path:     /{id}/update
+    defaults: { _controller: "AppBundle:Attila:update" }
+    methods:  [POST, PUT]
+
+attila_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AppBundle:Attila:delete" }
+    methods:  [POST, DELETE]
